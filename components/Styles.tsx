@@ -40,10 +40,10 @@ export default StyleSheet.create({
   flatListItem: {
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: "blue",
     padding: 5,
     paddingBottom: 7,
     marginBottom: 3,
+    borderColor: "green",
   },
   smallItalicText: {
     fontSize: 10,

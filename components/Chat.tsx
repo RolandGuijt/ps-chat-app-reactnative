@@ -1,24 +1,16 @@
 import React, { useState } from "react";
 import {
   FlatList,
-  Text,
   TextInput,
   View,
   Button,
   ListRenderItem,
-  ImagePropTypes,
 } from "react-native";
 import Styles from "./Styles";
+import { RenderChatItem, ChatItem } from "./ChatItem";
 
 interface Props {
   username: string;
-}
-
-interface ChatItem {
-  id: string;
-  text: string;
-  timeStamp: number;
-  by: string;
 }
 
 const Chat: React.FC<Props> = (props) => {
@@ -26,17 +18,7 @@ const Chat: React.FC<Props> = (props) => {
   let [chatItemList, setChatItemList] = useState(Array<ChatItem>());
 
   const renderItem: ListRenderItem<ChatItem> = ({ item }) => (
-    <View
-      style={[
-        Styles.flatListItem,
-        { borderColor: item.by == props.username ? "green" : "blue" },
-      ]}
-    >
-      <Text style={Styles.smallItalicText}>
-        {item.by} at {new Date(item.timeStamp).toLocaleTimeString()}
-      </Text>
-      <Text>{item.text}</Text>
-    </View>
+    <RenderChatItem chatItem={item} username={props.username}></RenderChatItem>
   );
 
   return (
