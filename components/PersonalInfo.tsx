@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { Button, Text, TextInput, View, Image } from "react-native";
 import Styles from "./Styles";
+import ImageChooser from "./ImageChooser"
 
 type PersonalInfoProps = {
-  onClosed: (name: string) => void;
+  onClosed: (name: string, image: string) => void;
 };
 
 const PersonalInfo = ({ onClosed }: PersonalInfoProps) => {
-  const [nameValue, setName] = useState("");
+  const [name, setName] = useState("");
+  const [image, setImage] = useState("");
   return (
     <View style={Styles.container}>
       <Image
@@ -20,10 +22,11 @@ const PersonalInfo = ({ onClosed }: PersonalInfoProps) => {
       <TextInput
         style={Styles.textInput}
         onChangeText={(text) => setName(text)}
-        value={nameValue}
+        value={name}
       />
+      <ImageChooser onChangeImage={(image) => setImage(image)}/>
       <View style={Styles.containerButton}>
-        <Button title="Start chatting!" onPress={() => onClosed(nameValue)} />
+        <Button title="Start chatting!" onPress={() => onClosed(name, image)} />
       </View>
     </View>
   );

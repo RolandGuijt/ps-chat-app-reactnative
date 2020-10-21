@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Text, Animated } from "react-native";
+import { Text, Animated, Easing, Image, View } from "react-native";
 import Styles from "./Styles";
 
 interface Props {
   chatItem: ChatItem;
   username: string;
+  image: string;
 }
 
 interface ChatItem {
@@ -19,7 +20,8 @@ const RenderChatItem: React.FC<Props> = (props) => {
   useEffect(() => {
     Animated.timing(animatedValue, {
       toValue: 1,
-      duration: 250,
+      duration: 400,
+      easing: (number) => Easing.ease(number),
       useNativeDriver: true,
     }).start();
   });
@@ -32,9 +34,13 @@ const RenderChatItem: React.FC<Props> = (props) => {
         { transform: [{ scale: animatedValue }] },
       ]}
     >
+      <Text>
+      <Image source={{ uri: 'data:image/jpeg;base64,' + props.image}} 
+                      style={{ width: 30, height: 30, borderRadius: 20 }} />
       <Text style={Styles.smallItalicText}>
         {props.chatItem.by} at{" "}
         {new Date(props.chatItem.timeStamp).toLocaleTimeString()}
+      </Text>
       </Text>
       <Text>{props.chatItem.text}</Text>
     </Animated.View>

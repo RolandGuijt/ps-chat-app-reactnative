@@ -47,8 +47,7 @@ export default StyleSheet.create({
   },
   smallItalicText: {
     fontSize: 10,
-    fontStyle: "italic",
-    alignSelf: "flex-end",
+    fontStyle: "italic"
   },
   logo: { width: "auto", resizeMode: "contain" },
 });
