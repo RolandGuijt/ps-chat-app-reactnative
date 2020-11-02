@@ -22,20 +22,27 @@ const Chat: React.FC<Props> = (props) => {
   useEffect(() => {
     (async () => {
       try {
-        await Socket.start();
-        console.log("SignalR Connected.");
-    } catch (err) {
+        if (Socket.state == "Disconnected") {
+          await Socket.start();
+        }
+      } catch (err) {
         console.log(err);
-    };
+      }
     })();
-    Socket.on("ReceiveMessage", chatItem => {
-      setChatItemList(chatItemList => [...chatItemList, chatItem]);
+    Socket.on("ReceiveMessage", (chatItem) => {
+      setChatItemList((chatItemList) => {
+        if (chatItemList.find((i) => i.id == chatItem.id)) return chatItemList;
+        return [...chatItemList, chatItem];
+      });
     });
   }, []);
 
-
   const renderItem: ListRenderItem<ChatItem> = ({ item }) => (
-    <RenderChatItem chatItem={item} username={props.username} image={props.image}></RenderChatItem>
+    <RenderChatItem
+      chatItem={item}
+      username={props.username}
+      image={props.image}
+    ></RenderChatItem>
   );
 
   return (
@@ -48,23 +55,21 @@ const Chat: React.FC<Props> = (props) => {
         keyExtractor={(item) => item.id}
       ></FlatList>
 
-      <View style={Styles.containerHorizontal}>
+      <View style={Styles.sendSection}>
         <TextInput
           style={Styles.chatTextInput}
           value={chatInput}
           onChangeText={(text) => setChatInput(text)}
-
         ></TextInput>
         <Button
           title="Send"
           onPress={async () => {
-            await Socket.invoke("SendMessage", 
-              {
-                id: Math.random().toString(36).substring(7),
-                text: chatInput,
-                timeStamp: Date.now(),
-                by: props.username,
-              });
+            await Socket.invoke("SendMessage", {
+              id: Math.random().toString(36).substring(7),
+              text: chatInput,
+              timeStamp: Date.now(),
+              by: props.username,
+            });
             setChatInput("");
           }}
         ></Button>
