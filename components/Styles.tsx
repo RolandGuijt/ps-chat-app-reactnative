@@ -2,39 +2,47 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: "#ff1",
-    justifyContent: "center",
+    flex: 1,
+  },
+
+  innerContainer: {
+    flex: 1,
     padding: 10,
+    justifyContent: "space-between",
+    alignItems: "stretch",
   },
 
   //personal info
-  startChattingButton: {
-    width: "auto",
-    marginTop: 5,
-  },
-
   logo: { width: "auto", resizeMode: "contain" },
 
   enterYourName: {
-    alignItems: "center",
-    marginBottom: 5,
-    fontSize: 16,
+    alignSelf: "center",
+  },
+
+  nameTextBox: {
+    fontSize: 20,
   },
 
   nameTextInput: {
     borderColor: "rgba(52, 52, 52, 0.8)",
     borderWidth: 1,
     borderRadius: 4,
+    fontSize: 18,
   },
 
-  avatarBig: { height: 75, width: 75, borderRadius: 20, marginTop: 5 },
+  avatarBig: {
+    height: 100,
+    width: 100,
+    borderRadius: 20,
+    marginTop: 15,
+    alignSelf: "center",
+  },
 
   //chat
   sendSection: {
     flexDirection: "row",
-    height: 40,
-    marginTop: 15,
+    margin: 15,
   },
 
   chatTextInput: {
@@ -50,19 +58,14 @@ export default StyleSheet.create({
     flexWrap: "wrap",
   },
 
-  flatListChat: {
-    borderColor: "rgba(52, 52, 52, 0.8)",
-    borderWidth: 1,
-    borderRadius: 4,
-    padding: 5,
-  },
-
   flatListItem: {
     borderRadius: 10,
     borderWidth: 1,
     padding: 5,
     paddingBottom: 7,
-    marginBottom: 3,
+    marginBottom: 7,
+    marginLeft: 16,
+    marginRight: 16,
     borderColor: "green",
   },
 

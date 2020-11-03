@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import { AsyncStorage, View } from "react-native";
+import { AsyncStorage, SafeAreaView } from "react-native";
 import PersonalInfo from "./components/PersonalInfo";
 import Chat from "./components/Chat";
 import Styles from "./components/Styles";
@@ -43,9 +43,9 @@ export default function App() {
     );
 
   return (
-    <View style={Styles.container}>
+    <SafeAreaView style={Styles.container}>
       {activeComponent}
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }

@@ -40,15 +40,16 @@ const ImageChooser = (props: ImageChooserProps) => {
   };
 
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+    <View>
       <Button title="Pick an image" onPress={pickImage} />
       {image ? (
         <Image
+          resizeMode="cover"
           source={{ uri: "data:image/jpeg;base64," + image }}
           style={Styles.avatarBig}
         />
       ) : (
-        <Text>No image selected</Text>
+        <Text style={{ alignSelf: "center" }}>No image selected</Text>
       )}
     </View>
   );
