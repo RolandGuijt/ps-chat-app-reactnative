@@ -7,23 +7,27 @@ import Styles from "./components/Styles";
 import { AppLoading } from "expo";
 
 export default function App() {
+  const storageUserNameKey = "chatapp-username";
+  const storageImageKey = "chatapp-image";
   const [isLoading, setIsLoading] = useState(true);
   const [username, setUserName] = useState("");
   const [image, setImage] = useState("");
 
   const fetchPersonalData = async () => {
-    let fetchedUsername = await AsyncStorage.getItem("chatapp-username");
+    let fetchedUsername = await AsyncStorage.getItem(storageUserNameKey);
     let userName = fetchedUsername == null ? "" : fetchedUsername;
-    let fetchedImage = await AsyncStorage.getItem("chatapp-image");
+    let fetchedImage = await AsyncStorage.getItem(storageImageKey);
     let image = fetchedImage == null ? "" : fetchedImage;
     setUserName(userName);
     setImage(image);
     setIsLoading(false);
   };
 
-  const onPersonalInfoClosed = (name: string, image: string) => {
+  const onPersonalInfoClosed = async (name: string, image: string) => {
     setUserName(name);
+    await AsyncStorage.setItem(storageUserNameKey, name);
     setImage(image);
+    await AsyncStorage.setItem(storageImageKey, image);
   };
 
   if (isLoading) {

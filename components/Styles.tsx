@@ -76,8 +76,8 @@ export default StyleSheet.create({
   },
 
   avatarSmall: {
-    width: 25,
-    height: 25,
+    width: 30,
+    height: 30,
     borderRadius: 5,
     marginRight: 5,
     marginBottom: 2,

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button, Image, View, Platform, Text } from "react-native";
 import * as ImagePicker from "expo-image-picker";
+import * as ImageManipulator from "expo-image-manipulator";
 import Styles from "./Styles";
 
 type ImageChooserProps = {
@@ -28,13 +29,16 @@ const ImageChooser = (props: ImageChooserProps) => {
       mediaTypes: ImagePicker.MediaTypeOptions.Images,
       allowsEditing: true,
       aspect: [1, 1],
-      quality: 0,
-      base64: true,
     });
 
     if (!result.cancelled) {
-      var imageBase64 = result.base64 ?? "";
-      setImage(imageBase64);
+      var resizedImage = await ImageManipulator.manipulateAsync(
+        result.uri,
+        [{ resize: { width: 50, height: 50 } }],
+        { base64: true }
+      );
+      var imageBase64 = resizedImage.base64 ?? "";
+      setImage(result.uri);
       props.onChangeImage(imageBase64);
     }
   };
@@ -45,7 +49,7 @@ const ImageChooser = (props: ImageChooserProps) => {
       {image ? (
         <Image
           resizeMode="cover"
-          source={{ uri: "data:image/jpeg;base64," + image }}
+          source={{ uri: image }}
           style={Styles.avatarBig}
         />
       ) : (
