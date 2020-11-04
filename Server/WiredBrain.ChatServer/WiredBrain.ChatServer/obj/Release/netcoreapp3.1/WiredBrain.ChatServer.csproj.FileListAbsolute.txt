@@ -1,0 +1,21 @@
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\bin\Release\netcoreapp3.1\appsettings.Development.json
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\bin\Release\netcoreapp3.1\appsettings.json
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\bin\Release\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\WiredBrainChatServer - Web Deploy\profile.arm.json
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\bin\Release\netcoreapp3.1\WiredBrain.ChatServer.exe
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\bin\Release\netcoreapp3.1\WiredBrain.ChatServer.deps.json
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\bin\Release\netcoreapp3.1\WiredBrain.ChatServer.runtimeconfig.json
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\bin\Release\netcoreapp3.1\WiredBrain.ChatServer.runtimeconfig.dev.json
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\bin\Release\netcoreapp3.1\WiredBrain.ChatServer.dll
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\bin\Release\netcoreapp3.1\WiredBrain.ChatServer.pdb
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\obj\Release\netcoreapp3.1\WiredBrain.ChatServer.csprojAssemblyReference.cache
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\obj\Release\netcoreapp3.1\WiredBrain.ChatServer.AssemblyInfoInputs.cache
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\obj\Release\netcoreapp3.1\WiredBrain.ChatServer.AssemblyInfo.cs
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\obj\Release\netcoreapp3.1\WiredBrain.ChatServer.csproj.CoreCompileInputs.cache
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\obj\Release\netcoreapp3.1\WiredBrain.ChatServer.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\obj\Release\netcoreapp3.1\WiredBrain.ChatServer.RazorTargetAssemblyInfo.cache
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\obj\Release\netcoreapp3.1\staticwebassets\WiredBrain.ChatServer.StaticWebAssets.Manifest.cache
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\obj\Release\netcoreapp3.1\staticwebassets\WiredBrain.ChatServer.StaticWebAssets.xml
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\obj\Release\netcoreapp3.1\WiredBrain.ChatServer.dll
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\obj\Release\netcoreapp3.1\WiredBrain.ChatServer.pdb
+C:\Users\rolan\source\repos\ChatAppReactNative\ps-chat-app-reactnative\Server\WiredBrain.ChatServer\WiredBrain.ChatServer\obj\Release\netcoreapp3.1\WiredBrain.ChatServer.genruntimeconfig.cache
