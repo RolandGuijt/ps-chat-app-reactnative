@@ -6,21 +6,22 @@ export default StyleSheet.create({
     flex: 1,
   },
 
-  innerContainer: {
+  //personal info
+
+  personalInfoContainer: {
     flex: 1,
     padding: 10,
     justifyContent: "space-between",
     alignItems: "stretch",
   },
 
-  //personal info
   logo: { width: "auto", resizeMode: "contain" },
 
   enterYourName: {
     alignSelf: "center",
   },
 
-  nameTextBox: {
+  nameText: {
     fontSize: 20,
   },
 
@@ -51,6 +52,7 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderRadius: 4,
     flexGrow: 1,
+    fontSize: 18,
   },
 
   chatItemHeader: {
@@ -69,8 +71,12 @@ export default StyleSheet.create({
     borderColor: "green",
   },
 
+  chatText: {
+    fontSize: 18,
+  },
+
   smallItalicText: {
-    fontSize: 10,
+    fontSize: 16,
     fontStyle: "italic",
     alignSelf: "center",
   },

@@ -11,14 +11,14 @@ const PersonalInfo = ({ onClosed }: PersonalInfoProps) => {
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
   return (
-    <View style={Styles.innerContainer}>
+    <View style={Styles.personalInfoContainer}>
       <Image
         style={Styles.logo}
         source={require("../assets/wired-brain-coffee-logo.png")}
       ></Image>
 
       <View style={Styles.enterYourName}>
-        <Text style={Styles.nameTextBox}>Please enter your name</Text>
+        <Text style={Styles.nameText}>Please enter your name</Text>
         <TextInput
           style={Styles.nameTextInput}
           onChangeText={(text) => setName(text)}

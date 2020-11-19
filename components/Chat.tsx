@@ -10,12 +10,12 @@ import Styles from "./Styles";
 import { RenderChatItem, ChatItem } from "./ChatItem";
 import Socket from "./Socket";
 
-interface Props {
+interface ChatProps {
   username: string;
   image: string;
 }
 
-const Chat: React.FC<Props> = (props) => {
+const Chat = ({ username, image }: ChatProps) => {
   let [chatInput, setChatInput] = useState("");
   let [chatItemList, setChatItemList] = useState<ChatItem[]>([]);
 
@@ -38,7 +38,7 @@ const Chat: React.FC<Props> = (props) => {
   }, []);
 
   const renderItem: ListRenderItem<ChatItem> = ({ item }) => (
-    <RenderChatItem chatItem={item} username={props.username}></RenderChatItem>
+    <RenderChatItem chatItem={item} username={username}></RenderChatItem>
   );
 
   return (
@@ -62,9 +62,9 @@ const Chat: React.FC<Props> = (props) => {
             await Socket.invoke("SendMessage", {
               id: Math.random().toString(36).substring(7),
               text: chatInput,
-              image: props.image,
+              image: image,
               timeStamp: Date.now(),
-              by: props.username,
+              by: username,
             });
             setChatInput("");
           }}

@@ -14,13 +14,12 @@ export default function App() {
   const [image, setImage] = useState("");
 
   const fetchPersonalData = async () => {
-    let fetchedUsername = await AsyncStorage.getItem(storageUserNameKey);
-    let userName = fetchedUsername == null ? "" : fetchedUsername;
-    let fetchedImage = await AsyncStorage.getItem(storageImageKey);
-    let image = fetchedImage == null ? "" : fetchedImage;
-    setUserName(userName);
-    setImage(image);
-    setIsLoading(false);
+    //let fetchedUsername = await AsyncStorage.getItem(storageUserNameKey);
+    //let userName = fetchedUsername == null ? "" : fetchedUsername;
+    //let fetchedImage = await AsyncStorage.getItem(storageImageKey);
+    //let image = fetchedImage == null ? "" : fetchedImage;
+    //setUserName(userName);
+    //setImage(image);
   };
 
   const onPersonalInfoClosed = async (name: string, image: string) => {
