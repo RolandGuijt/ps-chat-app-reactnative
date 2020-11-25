@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import { AsyncStorage, SafeAreaView } from "react-native";
+import { SafeAreaView } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import PersonalInfo from "./components/PersonalInfo";
 import Chat from "./components/Chat";
 import Styles from "./components/Styles";
